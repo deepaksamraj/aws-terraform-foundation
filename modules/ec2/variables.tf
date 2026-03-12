@@ -23,3 +23,8 @@ variable "ami_id" {
   description = "AMI ID to use for EC2"
   type        = string
 }
+
+variable "instance_profile_name" {
+  description = "IAM instance profile to attach to EC2"
+  type        = string
+}

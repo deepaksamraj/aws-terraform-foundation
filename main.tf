@@ -30,4 +30,25 @@ module "ec2" {
   subnet_id         = module.vpc.public_subnet_ids[0]
   security_group_id = module.security_group.security_group_id
   ami_id            = "ami-09d0c9a85bf1b9ea7" # Ubuntu 22.04 LTS AMI for eu-west-1
+  instance_profile_name = module.iam.instance_profile_name
+}
+
+module "s3" {
+  source      = "./modules/s3"
+  
+  project     = "foundation"
+  bucket_name = "deepak-demo-bucket-${random_id.suffix.hex}"
+}
+
+resource "random_id" "suffix" {
+  byte_length = 4
+}
+module "iam" {
+  source  = "./modules/iam"
+  project = "foundation"
+}
+module "cloudwatch" {
+  source      = "./modules/cloudwatch"
+  project     = "foundation"
+  instance_id = module.ec2.instance_id
 }
