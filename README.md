@@ -1,10 +1,10 @@
-#AWS Terraform Foundation
+# AWS Terraform Foundation
 ![Infrastructure as Code](https://img.shields.io/badge/IaC-Terraform-5C4EE5?logo=terraform)
 ![Cloud Provider](https://img.shields.io/badge/Cloud-AWS-FF9900?logo=amazon-aws)
 ![Region](https://img.shields.io/badge/Region-eu--west--1-blue)
 ![Status](https://img.shields.io/badge/Build-Ready-brightgreen)
 
-##🚀 What This Project Builds
+## 🚀 What This Project Builds
 This Terraform project provisions a complete AWS foundational environment including networking, compute, storage, IAM, and monitoring. It follows modular best practices and demonstrates how to build secure, production‑ready infrastructure using Infrastructure as Code.
 
 The stack includes:
@@ -16,7 +16,7 @@ S3 bucket with encryption + blocked public access
 IAM role + instance profile for EC2
 CloudWatch CPU alarm
 
-##🏗️ Architecture Diagram
+## 🏗️ Architecture Diagram
 ```
                          +-----------------------------+
                          |         AWS Region          |
@@ -52,7 +52,7 @@ CloudWatch CPU alarm
 | CloudWatch CPU Alarm (>80%) |
 +-----------------------------+
 ```
-##📦 Prerequisites
+## 📦 Prerequisites
 Before deploying, ensure you have:
 
 AWS CLI installed and configured
@@ -64,7 +64,7 @@ Terraform v1.x installed
 
 An AWS IAM user or role with permissions to create VPC, EC2, S3, IAM, CloudWatch
 
-##🚀 How to Deploy
+## 🚀 How to Deploy
 From the project root:
 
 ```
@@ -79,7 +79,7 @@ To destroy the environment:
 ```
 terraform destroy
 ```
-##🔐 Security Decisions (Important for Reviewers)
+## 🔐 Security Decisions (Important for Reviewers)
 1. SSH restricted to a single IP
 Only your home IP is allowed to SSH into the EC2 instance.
 This prevents brute‑force attacks and is a core AWS security best practice.
@@ -97,7 +97,7 @@ This avoids hardcoded credentials and follows AWS’s recommended approach for w
 4. Least privilege everywhere
 Every resource is created with the minimum required permissions.
 
-##📤 Outputs Provided
+## 📤 Outputs Provided
 After deployment, Terraform prints:
 
 EC2 public IP
@@ -107,7 +107,7 @@ EC2 instance ID
 
 These are useful for testing, SSH access, and integration.
 
-##🧭 What I’d Add Next (Future Enhancements)
+## 🧭 What I’d Add Next (Future Enhancements)
 
 Remote Terraform state in S3 + DynamoDB locking
 Private subnets + NAT Gateway
