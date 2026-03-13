@@ -32,16 +32,17 @@ CloudWatch CPU alarm
                            |                       |
                 +----------------+       +----------------+
                 | Public Subnet 1|       | Public Subnet 2|
-                | 10.0.1.0/24    |       | 10.0.2.0/24    |
+                | 10.0.1.0/24            |  10.0.2.0/24   |
+                |     AZ - 1     |       |     AZ - 2     |
                 +----------------+       +----------------+
-                          |                       |
-                          |                       |
-                 +----------------+               |
-                 |   EC2 Instance |               |
-            |----|  IAM Role + SG |               |
-            |    +----------------+               |
-            |             |                       |
-            |             |                       |
+                          |                       
+                          |                       
+                 +----------------+               
+                 |   EC2 Instance |               
+            |----|  IAM Role + SG |                
+            |    +----------------+                 
+            |             |                        
+            |             |                        
             |    +----------------------------------------+
             |    |                S3 Bucket               |
             |    |  Versioning + Encryption + No Public   |
@@ -99,10 +100,10 @@ Every resource is created with the minimum required permissions.
 ## 📤 Outputs Provided
 After deployment, Terraform prints:
 
-EC2 public IP
-S3 bucket name
-VPC ID
-EC2 instance ID
+- EC2 public IP
+- S3 bucket name
+- VPC ID
+- EC2 instance ID
 
 These are useful for testing, SSH access, and integration.
 
