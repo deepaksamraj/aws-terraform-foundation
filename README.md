@@ -118,5 +118,4 @@ CI/CD pipeline (GitHub Actions) for fmt/validate/plan
 KMS encryption for S3 and IAM policies enforcing it
 
 ![Made with Love in Ireland](https://img.shields.io/badgeMade%20with%20%E2%9D%A4%20in-Ireland-green)
-
 ![Learning Project](https://img.shields.io/badge/Project-Type%3A%20Learning-ff69b4)
