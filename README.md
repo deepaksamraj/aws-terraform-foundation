@@ -55,15 +55,13 @@ CloudWatch CPU alarm
 ## 📦 Prerequisites
 Before deploying, ensure you have:
 
-AWS CLI installed and configured
+- AWS CLI installed and configured
+`aws configure`
+- An AWS IAM user or role with permissions to create VPC, EC2, S3, IAM, CloudWatch
+- Terraform v1.x installed
+- Get your IP address `curl ifconfig.me`
+- update your ipaddress in file <rootfolder>/variables.tf block `variable "ssh_cidr"`
 
-```
-aws configure
-Terraform v1.x installed
-```
-Get your IP address `curl ifconfig.me`
-Update your ipaddress for 
-An AWS IAM user or role with permissions to create VPC, EC2, S3, IAM, CloudWatch
 
 ## 🚀 How to Deploy
 From the project root:
