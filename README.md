@@ -61,7 +61,8 @@ AWS CLI installed and configured
 aws configure
 Terraform v1.x installed
 ```
-
+Get your IP address `curl ifconfig.me`
+Update your ipaddress for 
 An AWS IAM user or role with permissions to create VPC, EC2, S3, IAM, CloudWatch
 
 ## 🚀 How to Deploy

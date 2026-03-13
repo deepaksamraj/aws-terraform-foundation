@@ -37,7 +37,7 @@ variable "azs" {
 variable "ssh_cidr" {
   description = "Allowed SSH CIDR"
   type        = string
-  default     = "51.199.236.13/32"
+  default     = "<YOUR_IP_ADDRESS>/32"
 }
 
 variable "ami_id" {
